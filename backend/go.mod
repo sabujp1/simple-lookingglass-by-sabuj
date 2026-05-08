@@ -10,7 +10,6 @@ require (
 	github.com/gorilla/websocket v1.5.1
 	github.com/jackc/pgx/v5 v5.5.1
 	github.com/pkg/sftp v1.13.6
-	github.com/shiena/ansicolor v0.0.0-20200904204342-abf0e76ad2b3
 	github.com/spf13/viper v1.18.2
 	golang.org/x/crypto v0.18.0
 	golang.org/x/time v0.5.0
