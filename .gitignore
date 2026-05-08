@@ -1,6 +1,6 @@
 # Go dependencies
 vendor/
-*.sum
+vendor/*.sum
 
 # Build outputs
 bin/
