@@ -4,10 +4,10 @@ FROM node:20-alpine AS deps
 WORKDIR /app
 
 # Copy package files
-COPY package.json package-lock.json* ./
+COPY package.json ./
 
-# Install dependencies
-RUN npm ci
+# Install dependencies (use npm install since no package-lock.json)
+RUN npm install
 
 # Builder stage
 FROM node:20-alpine AS builder
@@ -17,9 +17,6 @@ WORKDIR /app
 # Copy node_modules from deps
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Generate Prisma client
-RUN npx prisma generate
 
 # Build the application
 ENV NEXT_TELEMETRY_DISABLED 1
