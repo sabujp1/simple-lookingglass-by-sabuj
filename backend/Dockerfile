@@ -6,11 +6,15 @@ WORKDIR /app
 # Install build dependencies
 RUN apk add --no-cache git ca-certificates tzdata
 
-# Copy go mod files first
-COPY go.mod ./
+# Set Go module proxy to avoid auth issues
+ENV GOPROXY=https://proxy.golang.org,direct
+ENV GOPRIVATE=
 
-# Download dependencies (this creates go.sum if missing)
-RUN go mod download
+# Copy go mod files first
+COPY go.mod go.sum ./
+
+# Download dependencies
+RUN go mod download && go mod verify
 
 # Copy source code
 COPY . .
