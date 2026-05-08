@@ -9,7 +9,6 @@ require (
 	github.com/gorilla/mux v1.8.1
 	github.com/gorilla/websocket v1.5.1
 	github.com/jackc/pgx/v5 v5.5.1
-	github.com/mikesmitty/ed25519 v0.0.0-20170611134016-15e2f1c8abf3
 	github.com/pkg/sftp v1.13.6
 	github.com/shiena/ansicolor v0.0.0-20200904204342-abf0e76ad2b3
 	github.com/spf13/viper v1.18.2
