@@ -1,0 +1,49 @@
+# Go dependencies
+vendor/
+*.sum
+
+# Build outputs
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage.out
+coverage.html
+.nyc_output/
+
+# Misc
+*.pem
+*.key
+secrets/
+credentials/
+admin/
+后勤/

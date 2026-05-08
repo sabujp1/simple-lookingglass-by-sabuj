@@ -1,0 +1,92 @@
+{
+  "routers": [
+    {
+      "name": "Core Router MK-01",
+      "hostname": "10.0.1.1",
+      "vendor": "mikrotik",
+      "port": 22,
+      "username": "admin",
+      "password": "changeme",
+      "zone": "Core",
+      "tags": ["core", "primary"],
+      "is_active": true
+    },
+    {
+      "name": "Core Router MK-02",
+      "hostname": "10.0.1.2",
+      "vendor": "mikrotik",
+      "port": 22,
+      "username": "admin",
+      "password": "changeme",
+      "zone": "Core",
+      "tags": ["core", "backup"],
+      "is_active": true
+    },
+    {
+      "name": "Edge Router JNPR-01",
+      "hostname": "10.0.2.1",
+      "vendor": "juniper",
+      "port": 22,
+      "username": "admin",
+      "password": "changeme",
+      "zone": "Edge",
+      "tags": ["edge", "upstream"],
+      "is_active": true
+    },
+    {
+      "name": "Edge Router JNPR-02",
+      "hostname": "10.0.2.2",
+      "vendor": "juniper",
+      "port": 22,
+      "username": "admin",
+      "password": "changeme",
+      "zone": "Edge",
+      "tags": ["edge", "ixp"],
+      "is_active": true
+    },
+    {
+      "name": "Distribution Cisco-01",
+      "hostname": "10.0.3.1",
+      "vendor": "cisco",
+      "port": 22,
+      "username": "admin",
+      "password": "changeme",
+      "zone": "Distribution",
+      "tags": ["distribution", "layer3"],
+      "is_active": true
+    },
+    {
+      "name": "Access Huawei-01",
+      "hostname": "10.0.4.1",
+      "vendor": "huawei",
+      "port": 22,
+      "username": "admin",
+      "password": "changeme",
+      "zone": "Access",
+      "tags": ["access", "aggregation"],
+      "is_active": true
+    }
+  ],
+  "zones": [
+    {
+      "name": "Core",
+      "description": "Core network infrastructure",
+      "location": "DC-1"
+    },
+    {
+      "name": "Edge",
+      "description": "Edge routing and peering",
+      "location": "DC-1"
+    },
+    {
+      "name": "Distribution",
+      "description": "Distribution layer switches",
+      "location": "DC-1"
+    },
+    {
+      "name": "Access",
+      "description": "Access layer networks",
+      "location": "DC-1"
+    }
+  ]
+}
